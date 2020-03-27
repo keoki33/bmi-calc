@@ -14,6 +14,9 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var weightSliderLabel: UILabel!
     
+    
+    var calculatorBrain = CalculatorBrain()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,7 +25,7 @@ class ViewController: UIViewController {
     
     @IBAction func heightSliderChange(_ sender: UISlider) {
         heightSliderLabel.text = String(format: "%.1fm", sender.value)
-        print(String(format: "%.1fm", sender.value))
+        print(String(format: "%.2fm", sender.value))
     }
     
     
