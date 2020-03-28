@@ -11,9 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var heightSliderLabel: UILabel!
-    
     @IBOutlet weak var weightSliderLabel: UILabel!
     
+    @IBOutlet weak var heightSlider: UISlider!
+    @IBOutlet weak var weightSlider: UISlider!
     
     var calculatorBrain = CalculatorBrain()
     
@@ -40,5 +41,9 @@ class ViewController: UIViewController {
         
     }
 
+    @IBAction func calculatePressed(_ sender: UIButton) {
+     let BMI = weightSlider.value / pow(heightSlider.value, 2)
+        print(String(format: "%.2f", BMI))
+    }
 }
 
