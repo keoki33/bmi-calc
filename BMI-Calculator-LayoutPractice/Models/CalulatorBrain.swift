@@ -9,14 +9,18 @@
 import Foundation
 
 struct CalculatorBrain {
+    
+    var bmiValue = "0.0"
+    var  backGroundColor = ""
+    
+    mutating func calculateBMI(height: Float, weight: Float)  {
+        let bmi = weight / pow(height, 2)
+        bmiValue = String(format: "%.2f", bmi)
+    }
+    
+    func getBMIValue() -> String {
+        return bmiValue
+    }
 
-
-
-
-
-
-    let bmi = weightSlider.value / pow(heightSlider.value, 2)
-       bmiValue = String(format: "%.2f", bmi)
-
-
+    
 }
