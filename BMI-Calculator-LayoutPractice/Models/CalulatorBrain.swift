@@ -9,4 +9,14 @@
 import Foundation
 
 struct CalculatorBrain {
+
+
+
+
+
+
+    let bmi = weightSlider.value / pow(heightSlider.value, 2)
+       bmiValue = String(format: "%.2f", bmi)
+
+
 }
