@@ -23,7 +23,7 @@ class ResultsViewController: UIViewController {
         super.viewDidLoad()
         bmiLabel.text = bmiValue
         adviceLabel.text = advice
-        backGround.backgroundColor = color
+        view.backgroundColor = color
         
         
         // Do any additional setup after loading the view.
