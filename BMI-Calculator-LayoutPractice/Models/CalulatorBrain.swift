@@ -10,17 +10,36 @@ import Foundation
 
 struct CalculatorBrain {
     
-    var bmiValue = "0.0"
+    var bmiValue: BMI?
     var  backGroundColor = ""
     
     mutating func calculateBMI(height: Float, weight: Float)  {
+        var advice = ""
+//        var color: UIColor
         let bmi = weight / pow(height, 2)
-        bmiValue = String(format: "%.2f", bmi)
+        if bmi < 18.5 {
+            print("underweight")
+            advice = "Underweight"
+        } else if bmi >= 18.5 && bmi <= 24.9 {
+            advice = "Normal"
+            print("Normal")
+        } else {
+            advice = "Overweight"
+            print("Overweight")
+        }
+        
+        
+        bmiValue = BMI(value: bmi, advice: advice, color: .red)
+        
+        
     }
     
     func getBMIValue() -> String {
-        return bmiValue
+        let string = String(format: "%.1f", bmiValue?.value ?? 0.0)
+        return string
     }
-
+    
+    
+    
     
 }
