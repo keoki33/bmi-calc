@@ -195,6 +195,7 @@
                     </view>
                     <connections>
                         <outlet property="adviceLabel" destination="wL7-Mk-scd" id="wsE-qj-L0b"/>
+                        <outlet property="backGround" destination="OwB-Gr-By2" id="iKD-Tc-yZQ"/>
                         <outlet property="bmiLabel" destination="hWo-gc-8p7" id="m7u-Sq-2fy"/>
                     </connections>
                 </viewController>
